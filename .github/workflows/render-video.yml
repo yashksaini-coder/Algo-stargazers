@@ -4,19 +4,22 @@ on:
       repoOrg:
         description: "Repo Org"
         required: true
-        default: "pomber"
+        default: "ajay-dhangar"
       repoName:
         description: "Repo Name"
         required: true
-        default: "didact"
+        default: "algo"
       starCount:
         description: "Star Count"
         required: true
         default: "100"
       duration:
         description: "Duration (seconds)"
-        required: false
-        default: "15"
+        required: true
+        default: "25"
+  schedule:
+    - cron: "0 0 * * *" # Runs once a day at midnight UTC
+
 name: Render video
 jobs:
   render:
